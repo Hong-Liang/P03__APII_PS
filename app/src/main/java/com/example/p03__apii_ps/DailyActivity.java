@@ -63,7 +63,6 @@ public class DailyActivity extends AppCompatActivity {
                 Intent i = new Intent(DailyActivity.this, AddActivity.class);
                 i.putExtra("DG", DG);
                 startActivityForResult(i, requestCodeForDGStats);
-                Log.i("AL", al.toString());
             }
         });
 
@@ -108,11 +107,10 @@ public class DailyActivity extends AppCompatActivity {
             if (data != null) {
                 // Get data passed back from 2nd activity
                 String like = data.getStringExtra("chose");
-                String statement = "";
                 // If it is activity started by clicking
                 //  Superman, create corresponding String
-                if(requestCode == requestCodeForDGStats){
-                    al.add(new DailyGrade(al.size() + 1, like, "C347"));
+                if(requestCode == requestCodeForDGStats) {
+                    al.add(new DailyGrade(al.size() + 1, like, ""));
                 }
                 aa = new DailyAdapter(this, R.layout.row, al);
                 lv.setAdapter(aa);
