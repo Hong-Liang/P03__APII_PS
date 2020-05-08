@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">P03__APII_PS</string>
+    <array name="modules">
+        <item>C302</item>
+        <item>C347</item>
+    </array>
+</resources>
