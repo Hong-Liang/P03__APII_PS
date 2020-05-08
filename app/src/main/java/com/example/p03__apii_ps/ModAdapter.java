@@ -40,7 +40,7 @@ public class ModAdapter extends ArrayAdapter<Module> {
         tvMC.setText(s.getModuleCode());
 
         tvMN = (TextView) rowView.findViewById(R.id.tvModuleName);
-        tvMN.setText("Week " + s.getModuleName());
+        tvMN.setText(s.getModuleName());
         return rowView;
     }
 }
